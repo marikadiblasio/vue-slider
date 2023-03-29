@@ -37,7 +37,7 @@ createApp({
                 }
             ],
             currentIndex: 0,
-            active: 'active'
+            active: 'active',
         }
     },
     methods: {
@@ -54,6 +54,15 @@ createApp({
             } else {
                 this.currentIndex--;
             }
+        },
+        start (){
+            return setInterval(this.goNext, 1000);
+        },
+        stop(){
+            clearInterval(this.interval);
         }
+    },
+    mounted(){
+        this.start()    
     }
 }).mount('#app');
