@@ -13,7 +13,7 @@
 <body>
     <div id="app" class="wrapper d-flex align-items-center justify-content-center">
         <div class="bg-black position-relative">
-            <div @mouseover="" class="slider position-relative">
+            <div @mouseover="stop" @mouseleave="start" class="slider position-relative">
                 <div class="slide">
                     <img :src="images[currentIndex].image" :alt="images[currentIndex].title" class="object-fit-cover">
                     <div class="overlay mx-1 ">
