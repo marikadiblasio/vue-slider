@@ -23,7 +23,7 @@
                 </div>
             </div>
             <div class="thumb-slider">
-                <div class="thumb" v-for="(im, index) in images" :key="index" :class="{'active' : currentIndex === index}">
+                <div class="thumb" @click="currentIndex = index" v-for="(im, index) in images" :key="index" :class="{'active' : currentIndex === index}">
                     <img :src="im.image" :alt="im.title">
                </div>
             </div> 
