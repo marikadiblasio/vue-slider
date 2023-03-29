@@ -16,14 +16,14 @@
             <div class="slider position-relative">
                 <div class="slide">
                     <img :src="images[currentIndex].image" :alt="images[currentIndex].title" class="object-fit-cover">
-                    <div class="overlay text-white mx-1 ">
+                    <div class="overlay mx-1 ">
                         <h5 class="fw-bold">{{images[currentIndex].title}}</h5>
                         <p>{{images[currentIndex].text}}</p>
                     </div> 
                 </div>
             </div>
             <div class="thumb-slider">
-                <div class="thumb" v-for="(im, index) in images" :key="index">
+                <div class="thumb" v-for="(im, index) in images" :key="index" :class="{'active' : currentIndex === index}">
                     <img :src="im.image" :alt="im.title">
                </div>
             </div> 
