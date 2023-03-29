@@ -56,7 +56,7 @@ createApp({
             }
         },
         start (){
-            return setInterval(this.goNext, 1000);
+            return setInterval(this.goNext, 3000);
         },
         stop(){
             clearInterval(this.interval);
