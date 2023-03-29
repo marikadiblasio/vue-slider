@@ -16,10 +16,10 @@
             <div class="slider position-relative">
                 <div class="slide">
                     <img :src="images[currentIndex].image" :alt="images[currentIndex].title" class="object-fit-cover">
-                    <!-- <div class="overlay">
-                        <h2 class="display-2  fw-bold text-center pt-5">{{im.title}}</h2>
-                        <p>{{im.text}}</p>
-                    </div>  -->
+                    <div class="overlay text-white mx-1 ">
+                        <h5 class="fw-bold">{{images[currentIndex].title}}</h5>
+                        <p>{{images[currentIndex].text}}</p>
+                    </div> 
                 </div>
             </div>
             <div class="thumb-slider">
