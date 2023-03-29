@@ -15,19 +15,20 @@
         <div class="bg-black position-relative">
             <div class="slider position-relative">
                 <div class="slide">
-                    <img src="" alt="" class="object-fit-cover">
-                    <div class="overlay">
-                    <h2 class="display-2  fw-bold text-center pt-5"></h2>
-               </div> 
-                    </div>
+                    <img :src="images[currentIndex].image" :alt="images[currentIndex].title" class="object-fit-cover">
+                    <!-- <div class="overlay">
+                        <h2 class="display-2  fw-bold text-center pt-5">{{im.title}}</h2>
+                        <p>{{im.text}}</p>
+                    </div>  -->
+                </div>
             </div>
             <div class="thumb-slider">
-                <div class="thumb">
-                    <img src="" alt="">
+                <div class="thumb" v-for="(im, index) in images" :key="index">
+                    <img :src="im.image" :alt="im.title">
                </div>
             </div> 
-                <button class="prev rounded-circle"><i class="fa-solid fa-angle-up"></i></button>
-                <button class="next rounded-circle"><i class="fa-solid fa-angle-down"></i></button>
+                <button @click="goPrev" class="prev rounded-circle"><i class="fa-solid fa-angle-up"></i></button>
+                <button @click="goNext" class="next rounded-circle"><i class="fa-solid fa-angle-down"></i></button>
         </div>
     </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>

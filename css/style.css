@@ -26,9 +26,9 @@ button {
 img {
     object-position: right;
 }
-.slide {
+/* .slide {
     display: none;
-}
+} */
 .overlay{
     position: absolute;
     background-color: transparent;
